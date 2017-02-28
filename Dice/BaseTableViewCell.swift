@@ -15,6 +15,7 @@ class BaseTableViewCell:UITableViewCell{
     }
     func setup(){
         backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+    layer.borderWidth = 0.5
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

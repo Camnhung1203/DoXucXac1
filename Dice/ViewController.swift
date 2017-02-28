@@ -8,11 +8,15 @@
 //
 
 import UIKit
+import AVFoundation
 import Firebase
-
+import GoogleMobileAds
 @available(iOS 9.0, *)
-class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
- var diem:Int = 500
+class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,GADInterstitialDelegate, GADBannerViewDelegate, UIAlertViewDelegate, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate {
+    var player:AVAudioPlayer!
+    let adUnitId = "ca-app-pub-4012719716442350/3160318226"
+    var interstitialAd: GADInterstitial?
+    var diem:Int = 500
     var DiemCuoc:Int = 0
     var SoDiemCuocChan:Int = 0
     var SoDiemCuocLe:Int = 0
@@ -121,8 +125,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     @IBOutlet weak var view123456: UIView!
     
+    @IBOutlet weak var AdBanner: GADBannerView!
    
-    
     @IBOutlet weak var testcon1: UIView!
     @IBOutlet weak var lblTongDiemDatCuoc: UILabel!
    
@@ -132,11 +136,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var pckview: UIPickerView!
     @IBOutlet weak var btnPlay: UIButton!
     @IBAction func abtnPlay(_ sender: Any) {
-
+       // player.play()
+      //  player.numberOfLoops = -1
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.play), userInfo: nil, repeats: true)
     }
     @IBOutlet weak var btnStop: UIButton!
     @IBAction func abtnStop(_ sender: Any) {
+        player.stop()
         btnPlay.isHidden = false
         btnStop.isHidden = true
         timer.invalidate()
@@ -1498,6 +1504,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         viewluudiem.abtnHuyluudiem.addTarget(self, action: #selector(ViewController.choitiep1), for: UIControlEvents.touchUpInside)
     }
     var arrPlayer:Array<Player> = []
+    var arrPlayers:Array<Player> = []
     var index:Int = 0
     func luudiem(){
         if viewluudiem.txtUser.text == "" {
@@ -1519,17 +1526,19 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         index += 1
         userdefault.set(index, forKey: "index")
-   
-        
-        
+         self.viewTopdiem.Bangdiem.beginUpdates()
         // restart lai diem choi lai tu dau
         diem = 500
         lblDiem.text = String("\(diem)")
         viewluudiem.isHidden = true
         abtnLuudiem.isHidden = false
+//XEM QUANG CAO FULL SCREEN
+            if interstitialAd != nil{
+                if interstitialAd!.isReady {
+                    interstitialAd?.present(fromRootViewController: self)
+                }
+            }
 
-        
-//        }
             }
     }
     let viewthuacuoc:viewMuadiem = {
@@ -1546,7 +1555,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     func thuachoilai(){
         viewthuacuoc.isHidden = true
-        // add quang cao vao day
+//XEM QUANG CAO FULL SCREEN
+        if interstitialAd != nil{
+            if interstitialAd!.isReady {
+                interstitialAd?.present(fromRootViewController: self)
+            }
+        }
+
     }
     let viewTopdiem:ViewWithTable = {
         let v = ViewWithTable()
@@ -1561,7 +1576,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         view.addContrainWithVS(format: "V:|[v0]|", views: viewTopdiem)
         view.addContrainWithVS(format: "H:|[v0]|", views: viewTopdiem)
         viewTopdiem.abtnDong.addTarget(self, action: #selector(ViewController.DongTable), for: UIControlEvents.touchUpInside)
+         print(self.arrPlayers)
     }
+        
     func DongTable(){
         viewTopdiem.isHidden = true
     }
@@ -1592,7 +1609,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         if DiemCuoc == 0 || viewDiemcuocChan.isHidden == false || viewDiemcuocLe.isHidden == false || viewDiemcuocTai.isHidden == false || viewDiemcuocXiu.isHidden == false || viewDiemcuocCap1.isHidden == false || viewDiemcuocCap2.isHidden == false || viewDiemcuocCap3.isHidden == false || viewDiemcuocCap4.isHidden == false || viewDiemcuocCap5.isHidden == false || viewDiemcuocCap6.isHidden == false || viewDiemcuocBa.isHidden == false || viewDiemcuocBa1.isHidden == false || viewDiemcuocBa2.isHidden == false || viewDiemcuocBa3.isHidden == false || viewDiemcuocBa4.isHidden == false || viewDiemcuocBa5.isHidden == false || viewDiemcuocBa6.isHidden == false || viewDiemcuoc4.isHidden == false || viewDiemcuoc5.isHidden == false || viewDiemcuoc6.isHidden == false || viewDiemcuoc7.isHidden == false || viewDiemcuoc8.isHidden == false || viewDiemcuoc9.isHidden == false || viewDiemcuoc10.isHidden == false || viewDiemcuoc11.isHidden == false || viewDiemcuoc12.isHidden == false || viewDiemcuoc13.isHidden == false || viewDiemcuoc14.isHidden == false || viewDiemcuoc15.isHidden == false || viewDiemcuoc16.isHidden == false || viewDiemcuoc17.isHidden == false || viewDiemcuocCon1.isHidden == false || viewDiemcuocCon2.isHidden == false || viewDiemcuocCon3.isHidden == false || viewDiemcuocCon4.isHidden == false || viewDiemcuocCon5.isHidden == false || viewDiemcuocCon6.isHidden == false || diem <= 0 || DiemCuoc > diem {
            
             self.timer.invalidate()
-
+            player.stop()
             }else{
                 btnPlay.isHidden = true
                 btnStop.isHidden = false
@@ -1605,6 +1622,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 pckview.selectRow(Int(random0), inComponent: 0, animated: true)
                 pckview.selectRow(Int(random1), inComponent: 1, animated: true)
                 pckview.selectRow(Int(random2), inComponent: 2, animated: true)
+            player.play()
+            player.numberOfLoops = -1
+            
         }
     }
 //MARK 1: PHẦN 1: SET UP Ô CHẴN:
@@ -3485,7 +3505,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //2.1: Hàm tổng quát
     func DatCuocOBa1(){
         viewDiemcuocBa1.isHidden = false
-        setupViewCuocBa()
+        setupViewCuocBa1()
     }
     ////2.2: Hàm set up vị trí các phần tử trog view đặt cược ô Ba 1
     func setupViewCuocBa1(){
@@ -3813,7 +3833,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //2: Xây dựng hàm đặt cược ô Ba 3:
     //2.1: Hàm tổng quát
     func DatCuocOBa3(){
-        viewDiemcuocBa.isHidden = false
+        viewDiemcuocBa3.isHidden = false
         setupViewCuocBa3()
     }
     ////2.2: Hàm set up vị trí các phần tử trog view đặt cược ô Ba 3
@@ -10225,7 +10245,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     let abtnLuudiem:UIButton = {
         let abtnLuu = UIButton()
         abtnLuu.setTitle("Lưu điểm", for: UIControlState.normal)
-        abtnLuu.setTitleColor(#colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), for: UIControlState.normal)
+        abtnLuu.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: UIControlState.normal)
         abtnLuu.translatesAutoresizingMaskIntoConstraints = false
         return abtnLuu
     }()
@@ -10233,13 +10253,47 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     let abtnTop10:UIButton = {
         let abtnTop = UIButton()
         abtnTop.setTitle("Xem Top điểm cao", for: UIControlState.normal)
-        abtnTop.setTitleColor(#colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), for: UIControlState.normal)
+        abtnTop.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: UIControlState.normal)
         abtnTop.translatesAutoresizingMaskIntoConstraints = false
         return abtnTop
     }()
    
     func test(){
         print("test ma")
+    }
+    
+// CREATE FUNCTION ADD AD FULL SCREEN:
+    func createAndLoadInterstitial() -> GADInterstitial {
+        let request = GADRequest()
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4012719716442350/8512965028")
+        interstitial.delegate = self
+        interstitial.load(request)
+        return interstitial
+    }
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitialAd = createAndLoadInterstitial()
+    }
+// ADD AD BANNER
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        AdBanner.isHidden = false
+    }
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError erro: GADRequestError) {
+        AdBanner.isHidden = true
+    }
+// ADD NATIVE EXPRESS BANNER - GADNativeExpressAdViewDelegate
+    
+    func nativeExpressAdViewDidReceiveAd(_ nativeExpressAdView: GADNativeExpressAdView) {
+        if viewthuacuoc.AdNative.videoController.hasVideoContent() {
+            print("Received an ad with a video asset.")
+        } else {
+            print("Received an ad without a video asset.")
+        }
+    }
+    
+    // MARK: - GADVideoControllerDelegate
+    
+    func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {
+        print("The video asset has completed playback.")
     }
 //////////////////
 /////MARK: TỔNG QUÁT CỦA VIEWDIDLOAD
@@ -10252,6 +10306,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         viewthuacuoc.isHidden = true
         view.addSubview(abtnLuudiem)
         view.addSubview(abtnTop10)
+        
+        //SET SOUND
+        let path:String = Bundle.main.path(forResource: "dice", ofType: "mp3")!
+        let url:URL = URL(fileURLWithPath: path)
+        do
+        {
+            player = try AVAudioPlayer(contentsOf: url)
+        }catch{}
         
         viewluudiem.isHidden = true
         abtnLuudiem.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -10266,12 +10328,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         abtnTop10.leftAnchor.constraint(equalTo: view123456.rightAnchor).isActive = true
         abtnTop10.heightAnchor.constraint(equalToConstant: 50).isActive = true
         abtnTop10.addTarget(self, action: #selector(ViewController.setupviewTopdiem), for: UIControlEvents.touchUpInside)
-        
         btnPlay.dinhdang(doRongVien: 1, mauSacVien: UIColor.yellow.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.clear)
         btnStop.dinhdang(doRongVien: 1, mauSacVien: UIColor.yellow.cgColor, doBoTron: 7, mauSacChu: UIColor.blue, mauNen: UIColor.clear)
         abtnTop10.dinhdang(doRongVien: 1, mauSacVien: UIColor.yellow.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.clear)
         abtnLuudiem.dinhdang(doRongVien: 1, mauSacVien: UIColor.yellow.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.clear)
-        viewTopdiem.abtnDong.dinhdang(doRongVien: 1, mauSacVien: UIColor.red.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.clear)
+        viewthuacuoc.abtnchoilai.dinhdang(doRongVien: 1, mauSacVien: UIColor.brown.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.cyan)
+        viewTopdiem.abtnDong.dinhdang(doRongVien: 1, mauSacVien: UIColor.red.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.cyan)
+        viewluudiem.abtnDongy.dinhdang(doRongVien: 1, mauSacVien: UIColor.red.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.cyan)
+        viewluudiem.abtnHuyluudiem.dinhdang(doRongVien: 1, mauSacVien: UIColor.red.cgColor, doBoTron: 7, mauSacChu: UIColor.red, mauNen: UIColor.cyan)
         pckview.dataSource = self
         pckview.delegate = self
         
@@ -10286,19 +10350,62 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         if let index2:Int = userdefault.object(forKey: "index") as? Int{
             index = index2
         }
-     
+     /*
         let ref: FIRDatabaseReference = FIRDatabase.database().reference()
         ref.child("Player").observe(FIRDataEventType.value, with: { (snapshot) in
             let arrOb:Dictionary<String,Dictionary<String,AnyObject>> = snapshot.value as! Dictionary<String,Dictionary<String,AnyObject>>
             for i in arrOb{
                 self.arrPlayer.append(Player(object: i.value))
             }
+    
             DispatchQueue.main.async {
                 self.viewTopdiem.Bangdiem.reloadData()
             }
         })
         viewTopdiem.Bangdiem.dataSource = self
+        */
+        let ref: FIRDatabaseReference = FIRDatabase.database().reference()
+        let ref1 = ref.child("Player").queryOrdered(byChild: "diemPlayer").queryLimited(toLast: 10)
         
+        ref1.observe(.value, with: { snapshot in
+            let arrOb1:Dictionary<String,Dictionary<String,AnyObject>> = snapshot.value as! Dictionary<String,Dictionary<String,AnyObject>>
+            for i in arrOb1{
+                self.arrPlayers.append(Player(object: i.value))
+            }
+            
+            print(self.arrPlayers)
+            DispatchQueue.main.async {
+                self.viewTopdiem.Bangdiem.reloadData()
+            }
+            self.viewTopdiem.Bangdiem.dataSource = self
+           
+        })
+        
+//ADD ADFULLSCREEN AND BANNER
+        interstitialAd = createAndLoadInterstitial()
+        AdBanner.isHidden = true
+        AdBanner.delegate = self
+        AdBanner.adUnitID = "ca-app-pub-4012719716442350/9376805420"
+        AdBanner.rootViewController = self
+        AdBanner.load(GADRequest())
+//ADD NATIVE EXPRESS BANNER
+        viewthuacuoc.AdNative.adUnitID = adUnitId
+        viewthuacuoc.AdNative.rootViewController = self
+        viewthuacuoc.AdNative.delegate = self
+        
+        // The video options object can be used to control the initial mute state of video assets.
+        // By default, they start muted.
+        let videoOptions = GADVideoOptions()
+        videoOptions.startMuted = true
+        viewthuacuoc.AdNative.setAdOptions([videoOptions])
+        
+        // Set this UIViewController as the video controller delegate, so it will be notified of events
+        // in the video lifecycle.
+        viewthuacuoc.AdNative.videoController.delegate = self
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        viewthuacuoc.AdNative.load(request)
 //1: ĐẶT CƯỢC Ô CHẴN:
         let tapGesChan = UITapGestureRecognizer(target: self, action: #selector(ViewController.DatCuocOChan))
         viewChan.addGestureRecognizer(tapGesChan)
@@ -10880,17 +10987,20 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
 }
 @available(iOS 9.0, *)
 extension ViewController:UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrPlayer.count
+        return arrPlayers.count
     }
 
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! Cell
-        cell.lblplayer.text = arrPlayer[indexPath.row].ten
-        cell.lbldiem.text = String(arrPlayer[indexPath.row].diem)
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! Cell
+            cell.lblplayer.text = arrPlayers[indexPath.row].ten
+            cell.lbldiem.text = String(arrPlayers[indexPath.row].diem)
+            return cell
     }
-    
-    }
+}
 
 

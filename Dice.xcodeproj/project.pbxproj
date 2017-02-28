@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9F01CBAA1E554C670082B39B /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01CBA91E554C670082B39B /* struct.swift */; };
+		9F01CBAC1E617B3A0082B39B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01CBAB1E617B390082B39B /* GoogleMobileAds.framework */; };
+		9F01CBB01E654BF50082B39B /* dice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F01CBAF1E654BF40082B39B /* dice.mp3 */; };
 		9F0F1D4A1E04F307004AC528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F1D491E04F307004AC528 /* AppDelegate.swift */; };
 		9F0F1D4C1E04F308004AC528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F1D4B1E04F308004AC528 /* ViewController.swift */; };
 		9F0F1D4F1E04F308004AC528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F1D4D1E04F308004AC528 /* Main.storyboard */; };
 		9F0F1D511E04F309004AC528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F1D501E04F309004AC528 /* Assets.xcassets */; };
 		9F0F1D541E04F309004AC528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F1D521E04F309004AC528 /* LaunchScreen.storyboard */; };
-		9F4ADE4B1E27AD99000C6E3D /* ViewCongrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ADE4A1E27AD99000C6E3D /* ViewCongrats.swift */; };
 		9F4ADE511E27EFAD000C6E3D /* viewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ADE501E27EFAD000C6E3D /* viewLogin.swift */; };
 		9F5838D81E29D77C005ECC08 /* viewMuadiem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5838D71E29D77C005ECC08 /* viewMuadiem.swift */; };
 		9FB658001E2E406400893B05 /* ViewWithTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB657FF1E2E406400893B05 /* ViewWithTable.swift */; };
@@ -29,6 +30,8 @@
 		4B5B0AD739F9C2B5F720EB1E /* Pods_Dice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AABAA204677A06F4EDABEEE /* Pods-Dice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dice/Pods-Dice.debug.xcconfig"; sourceTree = "<group>"; };
 		9F01CBA91E554C670082B39B /* struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
+		9F01CBAB1E617B390082B39B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		9F01CBAF1E654BF40082B39B /* dice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dice.mp3; sourceTree = "<group>"; };
 		9F0F1D461E04F307004AC528 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0F1D491E04F307004AC528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0F1D4B1E04F308004AC528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		9F0F1D501E04F309004AC528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0F1D531E04F309004AC528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F0F1D551E04F309004AC528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F4ADE4A1E27AD99000C6E3D /* ViewCongrats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCongrats.swift; sourceTree = "<group>"; };
 		9F4ADE501E27EFAD000C6E3D /* viewLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewLogin.swift; sourceTree = "<group>"; };
 		9F5838D71E29D77C005ECC08 /* viewMuadiem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewMuadiem.swift; sourceTree = "<group>"; };
 		9FB657FF1E2E406400893B05 /* ViewWithTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithTable.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F01CBAC1E617B3A0082B39B /* GoogleMobileAds.framework in Frameworks */,
 				F65FD3B5F5227C24FC631EC5 /* Pods_Dice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,14 +86,15 @@
 			children = (
 				9F0F1D491E04F307004AC528 /* AppDelegate.swift */,
 				9FB6582B1E51D82B00893B05 /* GoogleService-Info.plist */,
+				9F01CBAB1E617B390082B39B /* GoogleMobileAds.framework */,
 				9FEDD4521E1B994F001A0BE4 /* extensionUIButton.swift */,
 				9F01CBA91E554C670082B39B /* struct.swift */,
 				9F0F1D4B1E04F308004AC528 /* ViewController.swift */,
-				9F4ADE4A1E27AD99000C6E3D /* ViewCongrats.swift */,
 				9F5838D71E29D77C005ECC08 /* viewMuadiem.swift */,
 				9FB657FF1E2E406400893B05 /* ViewWithTable.swift */,
 				9F4ADE501E27EFAD000C6E3D /* viewLogin.swift */,
 				9FE112261E2A9D9E00013013 /* BaseTableViewCell.swift */,
+				9F01CBAF1E654BF40082B39B /* dice.mp3 */,
 				9FE112281E2A9DBB00013013 /* Cell.swift */,
 				9FFAAB301E1526D300E56839 /* extensionLayout.swift */,
 				9F0F1D4D1E04F308004AC528 /* Main.storyboard */,
@@ -182,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0F1D541E04F309004AC528 /* LaunchScreen.storyboard in Resources */,
+				9F01CBB01E654BF50082B39B /* dice.mp3 in Resources */,
 				9FB6582C1E51D82B00893B05 /* GoogleService-Info.plist in Resources */,
 				9F0F1D511E04F309004AC528 /* Assets.xcassets in Resources */,
 				9F0F1D4F1E04F308004AC528 /* Main.storyboard in Resources */,
@@ -244,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0F1D4C1E04F308004AC528 /* ViewController.swift in Sources */,
-				9F4ADE4B1E27AD99000C6E3D /* ViewCongrats.swift in Sources */,
 				9F4ADE511E27EFAD000C6E3D /* viewLogin.swift in Sources */,
 				9FE112271E2A9D9E00013013 /* BaseTableViewCell.swift in Sources */,
 				9F01CBAA1E554C670082B39B /* struct.swift in Sources */,
@@ -378,6 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q9K4337RFE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dice",
+				);
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -393,6 +401,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q9K4337RFE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dice",
+				);
 				INFOPLIST_FILE = Dice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

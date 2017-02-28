@@ -14,8 +14,8 @@ class viewLogin:UIView{
     
     var lblthongbao1:UILabel = {
         let lbl = UILabel()
-        lbl.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-        lbl.text = "Bạn muốn lưu điểm và chơi lại từ đầu?"
+        lbl.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        lbl.text = "LƯU ĐIỂM VÀ CHƠI LẠI TỪ ĐẦU?"
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -53,21 +53,21 @@ class viewLogin:UIView{
     }()
     let moneyimg:UIImageView = {
         let img = UIImageView ()
-        img.image = UIImage(named: "money5")
+        img.image = UIImage(named: "Dicebg3")
         img.contentMode = .scaleAspectFit
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        self.addSubview(moneyimg)
         self.addSubview(txtUser)
         self.addSubview(abtnDongy)
         self.addSubview(abtnHuyluudiem)
         self.addSubview(lblthongbao1)
         self.addSubview(abtnkhoangtrong)
-        self.addSubview(moneyimg)
-        addContrainWithVS(format: "V:|-50-[v0]-10-[v1]-10-[v2]-10-[v3]-|", views: lblthongbao1,txtUser,abtnkhoangtrong,moneyimg)
+        
+        addContrainWithVS(format: "V:|-50-[v0]-10-[v1]-10-[v2(50)]", views: lblthongbao1,txtUser,abtnkhoangtrong)
         lblthongbao1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         txtUser.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         txtUser.widthAnchor.constraint(equalToConstant: 200).isActive = true
@@ -75,10 +75,15 @@ class viewLogin:UIView{
         abtnkhoangtrong.widthAnchor.constraint(equalToConstant: 100).isActive = true
         abtnDongy.rightAnchor.constraint(equalTo: abtnkhoangtrong.leftAnchor).isActive = true
         abtnHuyluudiem.leftAnchor.constraint(equalTo: abtnkhoangtrong.rightAnchor).isActive = true
-        
+        abtnHuyluudiem.widthAnchor.constraint(equalTo: abtnDongy.widthAnchor).isActive = true
         abtnDongy.topAnchor.constraint(equalTo: abtnkhoangtrong.topAnchor).isActive = true
         abtnHuyluudiem.topAnchor.constraint(equalTo: abtnkhoangtrong.topAnchor).isActive = true
         moneyimg.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        moneyimg.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        moneyimg.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        moneyimg.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        moneyimg.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        moneyimg.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {

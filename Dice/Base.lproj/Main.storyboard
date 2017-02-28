@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GE-lZ-vWr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GE-lZ-vWr" customClass="GADBannerView">
                                 <rect key="frame" x="174" y="325" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -251,7 +251,7 @@
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzI-if-HOu">
                                 <rect key="frame" x="5" y="82" width="95" height="41"/>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-L8-4IE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-L8-4IE">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0I-I4-7Dz">
@@ -261,6 +261,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="62"/>
                                             </pickerView>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.57254904510000004" green="0.13773890821503967" blue="0.039451670039869151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="tfx-6L-8vi" firstAttribute="centerY" secondItem="g0I-I4-7Dz" secondAttribute="centerY" id="I6e-x2-Z4O"/>
                                             <constraint firstItem="tfx-6L-8vi" firstAttribute="centerX" secondItem="g0I-I4-7Dz" secondAttribute="centerX" id="JLk-9J-Pew"/>
@@ -538,6 +539,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
                     <connections>
+                        <outlet property="AdBanner" destination="4GE-lZ-vWr" id="RWp-zV-ACT"/>
                         <outlet property="btnPlay" destination="DRc-qU-5Et" id="P0K-Km-l0C"/>
                         <outlet property="btnStop" destination="Ybc-Rl-58u" id="Ndn-df-Uht"/>
                         <outlet property="lblDiem" destination="7xD-6z-HcY" id="bvi-4p-y8y"/>
