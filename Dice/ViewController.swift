@@ -1688,13 +1688,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CHẴN:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocChan)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocChan)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
             //1: CHIỀU DỌC:
-        viewDiemcuocChan.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocChan,sldDiemcuocChan)
+        viewDiemcuocChan.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocChan,sldDiemcuocChan)
        // lblDiemCuocChan.topAnchor.constraint(equalTo: lblThongbaoDiemCuocChan.topAnchor).isActive = true
         abtnOkie.topAnchor.constraint(equalTo: sldDiemcuocChan.bottomAnchor).isActive = true
         abtnCancel.topAnchor.constraint(equalTo: abtnOkie.topAnchor).isActive = true
@@ -1859,13 +1859,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CHẴN:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocLe)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocLe)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocLe.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocLe,sldDiemcuocLe)
+        viewDiemcuocLe.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocLe,sldDiemcuocLe)
         abtnOkieLe.topAnchor.constraint(equalTo: sldDiemcuocLe.bottomAnchor).isActive = true
         abtnCancelLe.topAnchor.constraint(equalTo: abtnOkieLe.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2027,13 +2027,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô TÀI:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocTai)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocTai)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocTai.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocTai,sldDiemcuocTai)
+        viewDiemcuocTai.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocTai,sldDiemcuocTai)
         abtnOkieTai.topAnchor.constraint(equalTo: sldDiemcuocTai.bottomAnchor).isActive = true
         abtnCancelTai.topAnchor.constraint(equalTo: abtnOkieTai.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2195,13 +2195,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô XỈU:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocXiu)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocXiu)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocXiu.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocXiu,sldDiemcuocXiu)
+        viewDiemcuocXiu.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocXiu,sldDiemcuocXiu)
         abtnOkieXiu.topAnchor.constraint(equalTo: sldDiemcuocXiu.bottomAnchor).isActive = true
         abtnCancelXiu.topAnchor.constraint(equalTo: abtnOkieXiu.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2362,13 +2362,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 1:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap1)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap1)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap1,sldDiemcuocCap1)
+        viewDiemcuocCap1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap1,sldDiemcuocCap1)
         abtnOkieCap1.topAnchor.constraint(equalTo: sldDiemcuocCap1.bottomAnchor).isActive = true
         abtnCancelCap1.topAnchor.constraint(equalTo: abtnOkieCap1.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2530,13 +2530,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 2:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap2)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap2)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap2,sldDiemcuocCap2)
+        viewDiemcuocCap2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap2,sldDiemcuocCap2)
         abtnOkieCap2.topAnchor.constraint(equalTo: sldDiemcuocCap2.bottomAnchor).isActive = true
         abtnCancelCap2.topAnchor.constraint(equalTo: abtnOkieCap2.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2696,13 +2696,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 3:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap3)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap3)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap3,sldDiemcuocCap3)
+        viewDiemcuocCap3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap3,sldDiemcuocCap3)
         abtnOkieCap3.topAnchor.constraint(equalTo: sldDiemcuocCap3.bottomAnchor).isActive = true
         abtnCancelCap3.topAnchor.constraint(equalTo: abtnOkieCap3.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -2862,13 +2862,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 4:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap4)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap4)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap4,sldDiemcuocCap4)
+        viewDiemcuocCap4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap4,sldDiemcuocCap4)
         abtnOkieCap4.topAnchor.constraint(equalTo: sldDiemcuocCap4.bottomAnchor).isActive = true
         abtnCancelCap4.topAnchor.constraint(equalTo: abtnOkieCap4.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3027,13 +3027,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 5:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap5)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap5)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap5,sldDiemcuocCap5)
+        viewDiemcuocCap5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap5,sldDiemcuocCap5)
         abtnOkieCap5.topAnchor.constraint(equalTo: sldDiemcuocCap5.bottomAnchor).isActive = true
         abtnCancelCap5.topAnchor.constraint(equalTo: abtnOkieCap5.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3191,13 +3191,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô CẶP 6:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCap6)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCap6)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCap6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCap6,sldDiemcuocCap6)
+        viewDiemcuocCap6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCap6,sldDiemcuocCap6)
         abtnOkieCap6.topAnchor.constraint(equalTo: sldDiemcuocCap6.bottomAnchor).isActive = true
         abtnCancelCap6.topAnchor.constraint(equalTo: abtnOkieCap6.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3355,13 +3355,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa,sldDiemcuocBa)
+        viewDiemcuocBa.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa,sldDiemcuocBa)
         abtnOkieBa.topAnchor.constraint(equalTo: sldDiemcuocBa.bottomAnchor).isActive = true
         abtnCancelBa.topAnchor.constraint(equalTo: abtnOkieBa.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3519,13 +3519,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 1:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa1)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa1)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa1,sldDiemcuocBa1)
+        viewDiemcuocBa1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa1,sldDiemcuocBa1)
         abtnOkieBa1.topAnchor.constraint(equalTo: sldDiemcuocBa1.bottomAnchor).isActive = true
         abtnCancelBa1.topAnchor.constraint(equalTo: abtnOkieBa1.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3684,13 +3684,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 2:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa2)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa2)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa2,sldDiemcuocBa2)
+        viewDiemcuocBa2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa2,sldDiemcuocBa2)
         abtnOkieBa2.topAnchor.constraint(equalTo: sldDiemcuocBa2.bottomAnchor).isActive = true
         abtnCancelBa2.topAnchor.constraint(equalTo: abtnOkieBa2.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -3848,13 +3848,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 3:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa3)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa3)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa3,sldDiemcuocBa3)
+        viewDiemcuocBa3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa3,sldDiemcuocBa3)
         abtnOkieBa3.topAnchor.constraint(equalTo: sldDiemcuocBa3.bottomAnchor).isActive = true
         abtnCancelBa3.topAnchor.constraint(equalTo: abtnOkieBa3.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4012,13 +4012,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 4:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa4)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa4)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa4,sldDiemcuocBa4)
+        viewDiemcuocBa4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa4,sldDiemcuocBa4)
         abtnOkieBa4.topAnchor.constraint(equalTo: sldDiemcuocBa4.bottomAnchor).isActive = true
         abtnCancelBa4.topAnchor.constraint(equalTo: abtnOkieBa4.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4176,13 +4176,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 5:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa5)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa5)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa5,sldDiemcuocBa5)
+        viewDiemcuocBa5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa5,sldDiemcuocBa5)
         abtnOkieBa5.topAnchor.constraint(equalTo: sldDiemcuocBa5.bottomAnchor).isActive = true
         abtnCancelBa5.topAnchor.constraint(equalTo: abtnOkieBa5.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4340,13 +4340,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô BA 6:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocBa6)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocBa6)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocBa6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocBa6,sldDiemcuocBa6)
+        viewDiemcuocBa6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocBa6,sldDiemcuocBa6)
         abtnOkieBa6.topAnchor.constraint(equalTo: sldDiemcuocBa6.bottomAnchor).isActive = true
         abtnCancelBa6.topAnchor.constraint(equalTo: abtnOkieBa6.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4504,13 +4504,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 4:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc4)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc4)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc4,sldDiemcuoc4)
+        viewDiemcuoc4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc4,sldDiemcuoc4)
         abtnOkie4.topAnchor.constraint(equalTo: sldDiemcuoc4.bottomAnchor).isActive = true
         abtnCancel4.topAnchor.constraint(equalTo: abtnOkie4.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4668,13 +4668,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 5:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc5)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc5)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc5,sldDiemcuoc5)
+        viewDiemcuoc5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc5,sldDiemcuoc5)
         abtnOkie5.topAnchor.constraint(equalTo: sldDiemcuoc5.bottomAnchor).isActive = true
         abtnCancel5.topAnchor.constraint(equalTo: abtnOkie5.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4832,13 +4832,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 6:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc6)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc6)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc6,sldDiemcuoc6)
+        viewDiemcuoc6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc6,sldDiemcuoc6)
         abtnOkie6.topAnchor.constraint(equalTo: sldDiemcuoc6.bottomAnchor).isActive = true
         abtnCancel6.topAnchor.constraint(equalTo: abtnOkie6.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -4996,13 +4996,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 7:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc7)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc7)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc7.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc7,sldDiemcuoc7)
+        viewDiemcuoc7.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc7,sldDiemcuoc7)
         abtnOkie7.topAnchor.constraint(equalTo: sldDiemcuoc7.bottomAnchor).isActive = true
         abtnCancel7.topAnchor.constraint(equalTo: abtnOkie7.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5160,13 +5160,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 8:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc8)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc8)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc8.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc8,sldDiemcuoc8)
+        viewDiemcuoc8.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc8,sldDiemcuoc8)
         abtnOkie8.topAnchor.constraint(equalTo: sldDiemcuoc8.bottomAnchor).isActive = true
         abtnCancel8.topAnchor.constraint(equalTo: abtnOkie8.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5324,13 +5324,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 9:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc9)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc9)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc9.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc9,sldDiemcuoc9)
+        viewDiemcuoc9.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc9,sldDiemcuoc9)
         abtnOkie9.topAnchor.constraint(equalTo: sldDiemcuoc9.bottomAnchor).isActive = true
         abtnCancel9.topAnchor.constraint(equalTo: abtnOkie9.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5488,13 +5488,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 10:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc10)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc10)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc10.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc10,sldDiemcuoc10)
+        viewDiemcuoc10.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc10,sldDiemcuoc10)
         abtnOkie10.topAnchor.constraint(equalTo: sldDiemcuoc10.bottomAnchor).isActive = true
         abtnCancel10.topAnchor.constraint(equalTo: abtnOkie10.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5652,13 +5652,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 11:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc11)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc11)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc11.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc11,sldDiemcuoc11)
+        viewDiemcuoc11.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc11,sldDiemcuoc11)
         abtnOkie11.topAnchor.constraint(equalTo: sldDiemcuoc11.bottomAnchor).isActive = true
         abtnCancel11.topAnchor.constraint(equalTo: abtnOkie11.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5816,13 +5816,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 12:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc12)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc12)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc12.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc12,sldDiemcuoc12)
+        viewDiemcuoc12.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc12,sldDiemcuoc12)
         abtnOkie12.topAnchor.constraint(equalTo: sldDiemcuoc12.bottomAnchor).isActive = true
         abtnCancel12.topAnchor.constraint(equalTo: abtnOkie12.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -5980,13 +5980,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 13:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc13)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc13)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc13.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc13,sldDiemcuoc13)
+        viewDiemcuoc13.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc13,sldDiemcuoc13)
         abtnOkie13.topAnchor.constraint(equalTo: sldDiemcuoc13.bottomAnchor).isActive = true
         abtnCancel13.topAnchor.constraint(equalTo: abtnOkie13.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6144,13 +6144,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 14:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc14)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc14)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc14.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc14,sldDiemcuoc14)
+        viewDiemcuoc14.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc14,sldDiemcuoc14)
         abtnOkie14.topAnchor.constraint(equalTo: sldDiemcuoc14.bottomAnchor).isActive = true
         abtnCancel14.topAnchor.constraint(equalTo: abtnOkie14.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6308,13 +6308,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 15:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc15)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc15)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc15.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc15,sldDiemcuoc15)
+        viewDiemcuoc15.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc15,sldDiemcuoc15)
         abtnOkie15.topAnchor.constraint(equalTo: sldDiemcuoc15.bottomAnchor).isActive = true
         abtnCancel15.topAnchor.constraint(equalTo: abtnOkie15.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6472,13 +6472,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 16:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc16)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc16)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc16.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc16,sldDiemcuoc16)
+        viewDiemcuoc16.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc16,sldDiemcuoc16)
         abtnOkie16.topAnchor.constraint(equalTo: sldDiemcuoc16.bottomAnchor).isActive = true
         abtnCancel16.topAnchor.constraint(equalTo: abtnOkie16.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6635,13 +6635,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô ĐIỂM 17:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuoc17)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuoc17)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuoc17.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuoc17,sldDiemcuoc17)
+        viewDiemcuoc17.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuoc17,sldDiemcuoc17)
         abtnOkie17.topAnchor.constraint(equalTo: sldDiemcuoc17.bottomAnchor).isActive = true
         abtnCancel17.topAnchor.constraint(equalTo: abtnOkie17.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6798,13 +6798,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con12:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon12)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon12)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon12.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon12,sldDiemcuocCon12)
+        viewDiemcuocCon12.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon12,sldDiemcuocCon12)
         abtnOkieCon12.topAnchor.constraint(equalTo: sldDiemcuocCon12.bottomAnchor).isActive = true
         abtnCancelCon12.topAnchor.constraint(equalTo: abtnOkieCon12.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -6961,13 +6961,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con13:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon13)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon13)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon13.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon13,sldDiemcuocCon13)
+        viewDiemcuocCon13.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon13,sldDiemcuocCon13)
         abtnOkieCon13.topAnchor.constraint(equalTo: sldDiemcuocCon13.bottomAnchor).isActive = true
         abtnCancelCon13.topAnchor.constraint(equalTo: abtnOkieCon13.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7124,13 +7124,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con14:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon14)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon14)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon14.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon14,sldDiemcuocCon14)
+        viewDiemcuocCon14.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon14,sldDiemcuocCon14)
         abtnOkieCon14.topAnchor.constraint(equalTo: sldDiemcuocCon14.bottomAnchor).isActive = true
         abtnCancelCon14.topAnchor.constraint(equalTo: abtnOkieCon14.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7287,13 +7287,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con15:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon15)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon15)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon15.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon15,sldDiemcuocCon15)
+        viewDiemcuocCon15.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon15,sldDiemcuocCon15)
         abtnOkieCon15.topAnchor.constraint(equalTo: sldDiemcuocCon15.bottomAnchor).isActive = true
         abtnCancelCon15.topAnchor.constraint(equalTo: abtnOkieCon15.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7450,13 +7450,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con16:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon16)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon16)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon16.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon16,sldDiemcuocCon16)
+        viewDiemcuocCon16.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon16,sldDiemcuocCon16)
         abtnOkieCon16.topAnchor.constraint(equalTo: sldDiemcuocCon16.bottomAnchor).isActive = true
         abtnCancelCon16.topAnchor.constraint(equalTo: abtnOkieCon16.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7613,13 +7613,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con23:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon23)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon23)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon23.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon23,sldDiemcuocCon23)
+        viewDiemcuocCon23.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon23,sldDiemcuocCon23)
         abtnOkieCon23.topAnchor.constraint(equalTo: sldDiemcuocCon23.bottomAnchor).isActive = true
         abtnCancelCon23.topAnchor.constraint(equalTo: abtnOkieCon23.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7776,13 +7776,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con24:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon24)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon24)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon24.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon24,sldDiemcuocCon24)
+        viewDiemcuocCon24.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon24,sldDiemcuocCon24)
         abtnOkieCon24.topAnchor.constraint(equalTo: sldDiemcuocCon24.bottomAnchor).isActive = true
         abtnCancelCon24.topAnchor.constraint(equalTo: abtnOkieCon24.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -7939,13 +7939,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con25:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon25)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon25)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon25.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon25,sldDiemcuocCon25)
+        viewDiemcuocCon25.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon25,sldDiemcuocCon25)
         abtnOkieCon25.topAnchor.constraint(equalTo: sldDiemcuocCon25.bottomAnchor).isActive = true
         abtnCancelCon25.topAnchor.constraint(equalTo: abtnOkieCon25.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8102,13 +8102,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con26:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon26)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon26)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon26.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon26,sldDiemcuocCon26)
+        viewDiemcuocCon26.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon26,sldDiemcuocCon26)
         abtnOkieCon26.topAnchor.constraint(equalTo: sldDiemcuocCon26.bottomAnchor).isActive = true
         abtnCancelCon26.topAnchor.constraint(equalTo: abtnOkieCon26.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8265,13 +8265,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con26:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon34)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon34)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon34.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon34,sldDiemcuocCon34)
+        viewDiemcuocCon34.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon34,sldDiemcuocCon34)
         abtnOkieCon34.topAnchor.constraint(equalTo: sldDiemcuocCon34.bottomAnchor).isActive = true
         abtnCancelCon34.topAnchor.constraint(equalTo: abtnOkieCon34.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8428,13 +8428,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con35:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon35)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon35)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon35.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon35,sldDiemcuocCon35)
+        viewDiemcuocCon35.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon35,sldDiemcuocCon35)
         abtnOkieCon35.topAnchor.constraint(equalTo: sldDiemcuocCon35.bottomAnchor).isActive = true
         abtnCancelCon35.topAnchor.constraint(equalTo: abtnOkieCon35.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8591,13 +8591,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con36:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon36)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon36)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon36.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon36,sldDiemcuocCon36)
+        viewDiemcuocCon36.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon36,sldDiemcuocCon36)
         abtnOkieCon36.topAnchor.constraint(equalTo: sldDiemcuocCon36.bottomAnchor).isActive = true
         abtnCancelCon36.topAnchor.constraint(equalTo: abtnOkieCon36.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8754,13 +8754,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con45:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon45)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon45)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon45.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon45,sldDiemcuocCon45)
+        viewDiemcuocCon45.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon45,sldDiemcuocCon45)
         abtnOkieCon45.topAnchor.constraint(equalTo: sldDiemcuocCon45.bottomAnchor).isActive = true
         abtnCancelCon45.topAnchor.constraint(equalTo: abtnOkieCon45.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -8917,13 +8917,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con46:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon46)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon46)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon46.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon46,sldDiemcuocCon46)
+        viewDiemcuocCon46.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon46,sldDiemcuocCon46)
         abtnOkieCon46.topAnchor.constraint(equalTo: sldDiemcuocCon46.bottomAnchor).isActive = true
         abtnCancelCon46.topAnchor.constraint(equalTo: abtnOkieCon46.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9080,13 +9080,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con56:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon56)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon56)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon56.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon56,sldDiemcuocCon56)
+        viewDiemcuocCon56.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon56,sldDiemcuocCon56)
         abtnOkieCon56.topAnchor.constraint(equalTo: sldDiemcuocCon56.bottomAnchor).isActive = true
         abtnCancelCon56.topAnchor.constraint(equalTo: abtnOkieCon56.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9322,13 +9322,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con1:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon1)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon1)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon1,sldDiemcuocCon1)
+        viewDiemcuocCon1.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon1,sldDiemcuocCon1)
         abtnOkieCon1.topAnchor.constraint(equalTo: sldDiemcuocCon1.bottomAnchor).isActive = true
         abtnCancelCon1.topAnchor.constraint(equalTo: abtnOkieCon1.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9485,13 +9485,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con2:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon2)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon2)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon2,sldDiemcuocCon2)
+        viewDiemcuocCon2.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon2,sldDiemcuocCon2)
         abtnOkieCon2.topAnchor.constraint(equalTo: sldDiemcuocCon2.bottomAnchor).isActive = true
         abtnCancelCon2.topAnchor.constraint(equalTo: abtnOkieCon2.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9648,13 +9648,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con3:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon3)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon3)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon3,sldDiemcuocCon3)
+        viewDiemcuocCon3.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon3,sldDiemcuocCon3)
         abtnOkieCon3.topAnchor.constraint(equalTo: sldDiemcuocCon3.bottomAnchor).isActive = true
         abtnCancelCon3.topAnchor.constraint(equalTo: abtnOkieCon3.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9811,13 +9811,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con4:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon4)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon4)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon4,sldDiemcuocCon4)
+        viewDiemcuocCon4.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon4,sldDiemcuocCon4)
         abtnOkieCon4.topAnchor.constraint(equalTo: sldDiemcuocCon4.bottomAnchor).isActive = true
         abtnCancelCon4.topAnchor.constraint(equalTo: abtnOkieCon4.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -9974,13 +9974,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con4:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon5)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon5)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon5,sldDiemcuocCon5)
+        viewDiemcuocCon5.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon5,sldDiemcuocCon5)
         abtnOkieCon5.topAnchor.constraint(equalTo: sldDiemcuocCon5.bottomAnchor).isActive = true
         abtnCancelCon5.topAnchor.constraint(equalTo: abtnOkieCon5.topAnchor).isActive = true
         //2: CHIỀU NGANG:
@@ -10137,13 +10137,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         //AUTOLAYOUT VIEW ĐIỂM CƯỢC Ô Con6:
         let height = UIScreen.main.bounds.height / 3
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         view.addContrainWithVS(format: "H:|-\(width)-[v0]-\(width)-|", views: viewDiemcuocCon6)
         view.addContrainWithVS(format: "V:|-\(height)-[v0]-\(height)-|", views: viewDiemcuocCon6)
         
         //AUTOLAYOUT LABEL, SLIDER, NÚT ĐỒNG Ý VÀ HUỶ
         //1: CHIỀU DỌC:
-        viewDiemcuocCon6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]-70-|", views: lblDiemCuocCon6,sldDiemcuocCon6)
+        viewDiemcuocCon6.addContrainWithVS(format: "V:|-10-[v0]-10-[v1]", views: lblDiemCuocCon6,sldDiemcuocCon6)
         abtnOkieCon6.topAnchor.constraint(equalTo: sldDiemcuocCon6.bottomAnchor).isActive = true
         abtnCancelCon6.topAnchor.constraint(equalTo: abtnOkieCon6.topAnchor).isActive = true
         //2: CHIỀU NGANG:
