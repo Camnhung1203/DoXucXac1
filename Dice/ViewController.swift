@@ -1576,7 +1576,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         view.addContrainWithVS(format: "V:|[v0]|", views: viewTopdiem)
         view.addContrainWithVS(format: "H:|[v0]|", views: viewTopdiem)
         viewTopdiem.abtnDong.addTarget(self, action: #selector(ViewController.DongTable), for: UIControlEvents.touchUpInside)
-         print(self.arrPlayers)
     }
         
     func DongTable(){
@@ -1734,14 +1733,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkie(){
         SoDiemCuocChan = Int(sldDiemcuocChan.value)
         viewDiemcuocChan.isHidden = true
-        print(SoDiemCuocChan)
         if SoDiemCuocChan != 0 && SoDiemCuocChan <= diem{
-            
             viewDaCuocChan.isHidden = false
             lblSoDiemDaCuocChan.text = String("$\(Int((sldDiemcuocChan.value)))")
         }else{
             if SoDiemCuocChan != 0 && SoDiemCuocChan > diem{
-           
                 let alert:UIAlertController = UIAlertController(title: "THÔNG BÁO", message: "Bạn đặt cược quá mức điểm bạn có. Bạn có: $\(self.diem)", preferredStyle: .alert)
                 let btnok:UIAlertAction = UIAlertAction(title: "Tắt thông báo", style: UIAlertActionStyle.cancel, handler: { (nil) in
                     self.sldDiemcuocChan.value = Float(self.diem)
@@ -1762,7 +1758,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         lblSoDiemDaCuocChan.text = String("$\(Int((sldDiemcuocChan.value)))")
         viewDaCuocChan.isHidden = true
         viewDiemcuocChan.isHidden = true
-        print(SoDiemCuocChan)
     }
     
     //B: Ô CHẴN THỂ HIỆN ĐIỂM CƯỢC:
@@ -1904,7 +1899,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieLe(){
         SoDiemCuocLe = Int(sldDiemcuocLe.value)
         viewDiemcuocLe.isHidden = true
-        print(SoDiemCuocLe)
         if SoDiemCuocLe != 0 && SoDiemCuocLe <= diem{
             
             viewDaCuocLe.isHidden = false
@@ -1932,7 +1926,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         lblSoDiemDaCuocLe.text = String("$\(Int((sldDiemcuocLe.value)))")
         viewDaCuocLe.isHidden = true
         viewDiemcuocLe.isHidden = true
-        print(SoDiemCuocLe)
     }
     
     //B: Ô LẺ THỂ HIỆN ĐIỂM CƯỢC:
@@ -2072,14 +2065,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieTai(){
         SoDiemCuocTai = Int(sldDiemcuocTai.value)
         viewDiemcuocTai.isHidden = true
-        print(SoDiemCuocTai)
         if SoDiemCuocTai != 0 && SoDiemCuocTai <= diem{
-            
             viewDaCuocTai.isHidden = false
             lblSoDiemDaCuocTai.text = String("$\(Int((sldDiemcuocTai.value)))")
         }else{
             if SoDiemCuocTai != 0 && SoDiemCuocTai > diem{
-                
                 let alert:UIAlertController = UIAlertController(title: "THÔNG BÁO", message: "Bạn đặt cược quá mức điểm bạn có. Bạn có: $\(self.diem)", preferredStyle: .alert)
                 let btnok:UIAlertAction = UIAlertAction(title: "Tắt thông báo", style: UIAlertActionStyle.cancel, handler: { (nil) in
                     self.sldDiemcuocTai.value = Float(self.diem)
@@ -2100,7 +2090,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         lblSoDiemDaCuocTai.text = String("$\(Int((sldDiemcuocTai.value)))")
         viewDaCuocTai.isHidden = true
         viewDiemcuocTai.isHidden = true
-        print(SoDiemCuocTai)
     }
     
     //B: Ô TÀI THỂ HIỆN ĐIỂM CƯỢC:
@@ -2240,14 +2229,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieXiu(){
         SoDiemCuocXiu = Int(sldDiemcuocXiu.value)
         viewDiemcuocXiu.isHidden = true
-        print(SoDiemCuocXiu)
         if SoDiemCuocXiu != 0 && SoDiemCuocXiu <= diem{
-            
             viewDaCuocXiu.isHidden = false
             lblSoDiemDaCuocXiu.text = String("$\(Int((sldDiemcuocXiu.value)))")
         }else{
             if SoDiemCuocXiu != 0 && SoDiemCuocXiu > diem{
-                
                 let alert:UIAlertController = UIAlertController(title: "THÔNG BÁO", message: "Bạn đặt cược quá mức điểm bạn có. Bạn có: $\(self.diem)", preferredStyle: .alert)
                 let btnok:UIAlertAction = UIAlertAction(title: "Tắt thông báo", style: UIAlertActionStyle.cancel, handler: { (nil) in
                     self.sldDiemcuocXiu.value = Float(self.diem)
@@ -2268,7 +2254,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         lblSoDiemDaCuocXiu.text = String("$\(Int((sldDiemcuocXiu.value)))")
         viewDaCuocXiu.isHidden = true
         viewDiemcuocXiu.isHidden = true
-        print(SoDiemCuocXiu)
     }
     
     //B: Ô XỈU THỂ HIỆN ĐIỂM CƯỢC:
@@ -2407,9 +2392,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieCap1(){
         SoDiemCuocCap1 = Int(sldDiemcuocCap1.value)
         viewDiemcuocCap1.isHidden = true
-        print(SoDiemCuocCap1)
         if SoDiemCuocCap1 != 0 && SoDiemCuocCap1 <= diem{
-            
             viewDaCuocCap1.isHidden = false
             lblSoDiemDaCuocCap1.text = String("$\(Int((sldDiemcuocCap1.value)))")
         }else{
@@ -2435,7 +2418,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         lblSoDiemDaCuocCap1.text = String("$\(Int((sldDiemcuocCap1.value)))")
         viewDaCuocCap1.isHidden = true
         viewDiemcuocCap1.isHidden = true
-        print(SoDiemCuocCap1)
     }
     
     //B: Ô CẶP 1 THỂ HIỆN ĐIỂM CƯỢC:
@@ -2575,14 +2557,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieCap2(){
         SoDiemCuocCap2 = Int(sldDiemcuocCap2.value)
         viewDiemcuocCap2.isHidden = true
-        print(SoDiemCuocCap2)
         if SoDiemCuocCap2 != 0 && SoDiemCuocCap2 <= diem{
-            
             viewDaCuocCap2.isHidden = false
             lblSoDiemDaCuocCap2.text = String("$\(Int((sldDiemcuocCap2.value)))")
         }else{
             if SoDiemCuocCap2 != 0 && SoDiemCuocCap2 > diem{
-                
                 let alert:UIAlertController = UIAlertController(title: "THÔNG BÁO", message: "Bạn đặt cược quá mức điểm bạn có. Bạn có: $\(self.diem)", preferredStyle: .alert)
                 let btnok:UIAlertAction = UIAlertAction(title: "Tắt thông báo", style: UIAlertActionStyle.cancel, handler: { (nil) in
                     self.sldDiemcuocCap2.value = Float(self.diem)
@@ -2741,14 +2720,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func ActionforBtnOkieCap3(){
         SoDiemCuocCap3 = Int(sldDiemcuocCap3.value)
         viewDiemcuocCap3.isHidden = true
-        print(SoDiemCuocCap3)
         if SoDiemCuocCap3 != 0 && SoDiemCuocCap3 <= diem{
-            
             viewDaCuocCap3.isHidden = false
             lblSoDiemDaCuocCap3.text = String("$\(Int((sldDiemcuocCap3.value)))")
         }else{
             if SoDiemCuocCap3 != 0 && SoDiemCuocCap3 > diem{
-                
                 let alert:UIAlertController = UIAlertController(title: "THÔNG BÁO", message: "Bạn đặt cược quá mức điểm bạn có. Bạn có: $\(self.diem)", preferredStyle: .alert)
                 let btnok:UIAlertAction = UIAlertAction(title: "Tắt thông báo", style: UIAlertActionStyle.cancel, handler: { (nil) in
                     self.sldDiemcuocCap3.value = Float(self.diem)
@@ -10252,16 +10228,12 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
 //MARK: NÚT TOP
     let abtnTop10:UIButton = {
         let abtnTop = UIButton()
-        abtnTop.setTitle("Xem Top điểm cao", for: UIControlState.normal)
+        abtnTop.setTitle("Top Người chơi", for: UIControlState.normal)
         abtnTop.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: UIControlState.normal)
         abtnTop.translatesAutoresizingMaskIntoConstraints = false
         return abtnTop
     }()
    
-    func test(){
-        print("test ma")
-    }
-    
 // CREATE FUNCTION ADD AD FULL SCREEN:
     func createAndLoadInterstitial() -> GADInterstitial {
         let request = GADRequest()
@@ -10373,7 +10345,6 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 self.arrPlayers.append(Player(object: i.value))
             }
             
-            print(self.arrPlayers)
             DispatchQueue.main.async {
                 self.viewTopdiem.Bangdiem.reloadData()
             }
